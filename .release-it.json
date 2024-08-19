@@ -17,6 +17,7 @@
     "ENABLE_LATER_publishArgs": ["--provenance"]
   },
   "github": {
+    "tokenRef": "GITHUB_TOKEN_RELEASE_IT",
     "release": true,
     "skipChecks":true,
     "assets": [
