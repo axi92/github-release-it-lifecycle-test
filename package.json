@@ -1,0 +1,24 @@
+{
+  "name": "github-release-it-lifecycle-test",
+  "version": "1.0.0",
+  "description": "This only serves the purpose to test the release-it lifecycle on github with actions. ",
+  "main": "dist/app.js",
+  "repository": "https://github.com/axi92/github-release-it-lifecycle-test.git",
+  "author": "axi92 <axi92@users.noreply.github.com>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "@release-it/conventional-changelog": "^8.0.1",
+    "@types/node": "^22.4.1",
+    "typescript": "^5.5.4"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node ./dist/index.js",
+    "dev": "ts-node ./src/index.ts"
+  },
+  "files": ["dist"]
+}
