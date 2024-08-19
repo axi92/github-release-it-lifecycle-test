@@ -1,14 +1,16 @@
 {
   "$schema": "https://unpkg.com/release-it@17/schema/release-it.json",
   "hooks": {
-    "before:init": ["rm *.tgz", "yarn pack --out '%s_%v.tgz'"]
+    "before:init": ["rm *.tgz", "yarn pack --out '%s_%v.tgz'"],
+    "after:bump": "npx auto-changelog -p"
   },
   "git": {
     "commitMessage": "chore: release ${version}",
     "tagName": "${version}",
     "commitArgs": ["-S"],
     "tagArgs": ["-s"],
-    "tagExclude": "*[-]*"
+    "tagExclude": "*[-]*",
+    "changelog": "npx auto-changelog --stdout --commit-limit false -u --template https://raw.githubusercontent.com/release-it/release-it/main/templates/changelog-compact.hbs"
   },
   "npm": {
     "publish": true,
