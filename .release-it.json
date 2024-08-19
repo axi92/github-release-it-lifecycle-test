@@ -1,17 +1,29 @@
 {
+  "$schema": "https://unpkg.com/release-it@17/schema/release-it.json",
+  "hooks": {
+    "before:init": ["yarn pack --out '%s_%v.tgz'"]
+  },
   "git": {
     "commitMessage": "chore: release ${version}",
-    "tagName": "${version}"
+    "tagName": "${version}",
+    "commitArgs": ["-S"],
+    "tagArgs": ["-S"],
+    "tagExclude": "*[-]*"
   },
   "npm": {
-    "publish": true
+    "publish": true,
+    "publishArgs": ["--provenance"]
   },
   "github": {
-    "release": true
+    "release": true,
+    "assets": [
+      "*.tgz"
+    ]
   },
   "plugins": {
     "@release-it/conventional-changelog": {
-      "preset": "angular"
+      "preset": "angular",
+      "infile": "CHANGELOG.md"
     }
   }
 }

@@ -20,5 +20,7 @@
     "start": "node ./dist/index.js",
     "dev": "ts-node ./src/index.ts"
   },
-  "files": ["dist"]
+  "files": [
+    "dist"
+  ]
 }
