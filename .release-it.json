@@ -16,6 +16,7 @@
   },
   "github": {
     "release": true,
+    "autoGenerate": true,
     "assets": [
       "*.tgz"
     ]
