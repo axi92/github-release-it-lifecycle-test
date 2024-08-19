@@ -1,7 +1,7 @@
 {
   "$schema": "https://unpkg.com/release-it@17/schema/release-it.json",
   "hooks": {
-    "before:init": ["rm *.tgz", "yarn pack --out '%s_%v.tgz'"],
+    "before:init": ["rm -f *.tgz", "yarn pack --out '%s_%v.tgz'"],
     "after:bump": "npx auto-changelog -p"
   },
   "git": {
