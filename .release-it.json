@@ -21,7 +21,7 @@
   },
   "npm": {
     "publish": true,
-    "ENABLE_LATER_publishArgs": [
+    "publishArgs": [
       "--provenance"
     ]
   },
