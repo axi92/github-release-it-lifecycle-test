@@ -21,6 +21,7 @@
     "build": "tsc",
     "start": "node ./dist/index.js",
     "dev": "ts-node ./src/index.ts",
+    "changelog": "npx auto-changelog --stdout --commit-limit false -u --template https://raw.githubusercontent.com/release-it/release-it/main/templates/changelog-compact.hbs",
     "release": "release-it"
   },
   "files": [
