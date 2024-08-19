@@ -12,7 +12,7 @@
   },
   "npm": {
     "publish": true,
-    "publishArgs": ["--provenance"]
+    "ENABLE_LATER_publishArgs": ["--provenance"]
   },
   "github": {
     "release": true,
