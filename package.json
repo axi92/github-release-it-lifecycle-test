@@ -3,10 +3,12 @@
   "version": "1.1.6",
   "description": "This only serves the purpose to test the release-it lifecycle on github with actions. ",
   "main": "dist/app.js",
-  "repository": "https://github.com/axi92/github-release-it-lifecycle-test.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/axi92/github-release-it-lifecycle-test.git"
+  },
   "author": "axi92 <axi92@users.noreply.github.com>",
   "license": "MIT",
-  "private": false,
   "dependencies": {
     "@release-it/conventional-changelog": "^8.0.1",
     "@types/node": "^22.4.1",
@@ -25,5 +27,6 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "packageManager": "yarn@4.4.0"
 }
