@@ -45,8 +45,8 @@ jobs:
 
       - name: git config
         run: |
-          git config user.name "evva-bee-bot"
-          git config user.email "evva-bee-bot@users.noreply.github.com"
+          git config user.name "${{ steps.import-gpg.outputs.name }}"
+          git config user.email "${{ steps.import-gpg.outputs.email }}"
 
       - name: Install dependencies
         run: yarn install
